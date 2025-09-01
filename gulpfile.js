@@ -1,6 +1,8 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const browserSync = require("browser-sync").create();
+const cleanCSS = require("gulp-clean-css");
+const htmlmin = require("gulp-htmlmin");
 
 const paths = {
   scss: "./src/styles/**/*.scss",
@@ -24,6 +26,7 @@ function styles() {
   return gulp
     .src(paths.scss)
     .pipe(sass().on("error", sass.logError))
+    .pipe(cleanCSS({ level: 2 }))
     .pipe(gulp.dest("dist/css"))
     .pipe(browserSync.stream());
 }
@@ -31,6 +34,12 @@ function styles() {
 function html() {
   return gulp
     .src(paths.html)
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true,
+        removeComments: true,
+      })
+    )
     .pipe(gulp.dest("./dist"))
     .pipe(browserSync.stream());
 }
