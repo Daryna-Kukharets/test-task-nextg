@@ -1,0 +1,31 @@
+@use "../../styles/utils" as *;
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    display: block;
+    width: 161px;
+    height: 40px;
+    background-color: $logo-color;
+
+    @include hover(transform scale(1.1));
+  }
+
+  &__menu {
+    @include on-desktop {
+      display: none;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 5;
+    color: $title-color;
+    font-size: 24px;
+
+    @include hover(transform scale(1.2));
+  }
+}

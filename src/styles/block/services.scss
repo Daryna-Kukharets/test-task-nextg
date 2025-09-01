@@ -1,0 +1,41 @@
+@use "../../styles/utils" as *;
+
+.services {
+  display: grid;
+  gap: 31px;
+  position: relative;
+  z-index: 5;
+  
+  @include on-tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include on-large-desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__card {
+    @include hover(transform scale(1.1));
+  }
+
+  &__top {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__text {
+    padding: 15px 0 22px 60px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    
+    @include hover(transform scale(1.2), filter hue-rotate(190deg));
+  }
+}

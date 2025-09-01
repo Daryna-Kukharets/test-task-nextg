@@ -1,0 +1,191 @@
+@use "../../styles/utils" as *;
+
+.info {
+  position: relative;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 380px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-color;
+  }
+
+  &__box {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
+    background-color: $bg-color;
+    
+    @include container;
+    @include on-tablet {
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 1.2fr 1fr;
+    }
+  }
+
+  &__photo-w-text {
+    position: relative;
+    grid-column: span 2;
+
+    @include on-tablet {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 20px;
+
+    @include on-tablet {
+      border-top-right-radius: 0;
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 30px;
+
+    &--1 {
+      background-color: $white-color;
+    }
+
+    &--2 {
+      background-color: $button-blue-color;
+
+      @include on-tablet {
+        border-top-right-radius: 20px;
+      }
+    }
+
+    &--3 {
+      grid-column: span 2;
+      flex-direction: column;
+      align-items: start;
+      background-color: $yellow-color;
+      border-bottom-right-radius: 20px;
+      padding-block: 30px;
+    }
+  }
+
+  &__block-on-photo {
+    position: absolute;
+    width: 235px;
+    height: 332px;
+    bottom: 0;
+    right: 0;
+    background-color: $button-blue-color;
+
+    @include on-desktop {
+      width: 285px;
+    }
+  }
+
+  &__block-title {
+    font-size: 20px;
+    line-height: 50px;
+  }
+
+  &__text {
+    font-size: 15px;
+
+    &--absolute {
+      color: $white-color;
+    }
+
+    &--2 {
+      color: $white-color;
+    }
+
+    &--3 {
+      color: $black-color;
+    }
+  }
+
+  &__contacts {
+    padding-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include on-desktop {
+      gap: 30px;
+      flex-direction: row;
+    }
+
+    @include on-large-desktop {
+      gap: 40px;
+    }
+  }
+
+  &__line {
+    width: 46px;
+    height: 1px;
+    background-color: $white-color;
+
+    @include on-desktop {
+      height: 46px;
+      width: 1px;
+    }
+  }
+
+  &__phone-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $button-blue-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include hover(background-color $title-color);
+
+    @include on-large-desktop {
+      width: 46px;
+      height: 46px;
+    }
+  }
+
+  &__icon {
+    color: $white-color;
+  }
+
+  &__contact-text {
+    @extend %font-open-sans-semibold;
+
+    font-size: 14px;
+    line-height: 24px;
+    color: $button-blue-color;
+  }
+
+  &__number {
+    @extend %font-open-sans-semibold;
+
+    font-size: 18px;
+    line-height: 24px;
+    color: $black-color;
+
+    @include hover(color $button-blue-color);
+
+    @include on-large-desktop {
+      font-style: 24px;
+    }
+  }
+
+  &__number-link {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+  }
+}

@@ -1,0 +1,77 @@
+@use "../../styles/utils" as *;
+
+.reviews {
+  position: relative;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    z-index: -1;
+    background-color: $bg-color;
+    border-bottom-left-radius: 150px;
+  }
+
+  &__box {
+    display: grid;
+    grid-gap: 30px;
+
+    @include container;
+    @include on-desktop {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__card {
+    background-color: $white-color;
+    border: 1px solid $grey-color;
+    border-radius: 12px;
+    padding: 40px;
+
+    @include hover(transform translateY(-5%));
+  }
+
+  &__star {
+    color: $yellow-color;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    color: $grey-color;
+    font-size: 40px;
+  }
+
+  &__text {
+    padding-top: 20px;
+    color: $black-color;
+    line-height: 30px;
+  }
+
+  &__user {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $black-color;
+  }
+}

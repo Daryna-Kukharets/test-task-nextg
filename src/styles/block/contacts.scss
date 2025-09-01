@@ -1,0 +1,59 @@
+@use "../../styles/utils" as *;
+
+.contacts {
+  background-color: $yellow-color;
+  padding-block: 40px;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include container;
+
+    @include on-tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__article {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__title {
+    @extend %font-rubik-medium;
+
+    font-size: 20px;
+    line-height: 30px;
+    color: $title-color;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 20px;
+    color: $title-color;
+
+    @include hover(color $button-blue-color);
+  }
+
+  &__icon {
+    color: $button-blue-color;
+    font-size: 30px;
+
+    @include hover(color $title-color);
+  }
+
+  &__line {
+    width: 52px;
+    height: 1px;
+    background-color: $grey-color;
+
+    @include on-tablet {
+      width: 1px;
+      height: 52px;
+    }
+  }
+}

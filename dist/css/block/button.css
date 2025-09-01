@@ -1,0 +1,152 @@
+.button {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+h2, h1 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+}
+
+p,
+a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 54px;
+  color: #0C122D;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 56px;
+    line-height: 66px;
+  }
+}
+@media (min-width: 1140px) {
+  h1 {
+    font-size: 72px;
+    line-height: 82px;
+  }
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 50px;
+  color: #0C122D;
+}
+
+h3 {
+  line-height: 28px;
+  color: #0C122D;
+  font-size: 18px;
+}
+@media (min-width: 1140px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
+p,
+a {
+  font-size: 16px;
+  line-height: 24px;
+  color: #575C74;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+  min-width: 360px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 30px;
+  color: #FFFFFF;
+  background-color: #1B5FC1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button--contact {
+  width: 123px;
+  height: 47px;
+}
+.button--contact:hover {
+  color: #1B5FC1;
+  border: 1px solid #1B5FC1;
+  background-color: transparent;
+}
+.button--shop {
+  width: 115px;
+  height: 46px;
+}
+.button--shop:hover {
+  color: #1B5FC1;
+  border: 1px solid #1B5FC1;
+  background-color: transparent;
+}
+.button--yellow {
+  width: 125px;
+  height: 46px;
+  background-color: transparent;
+  color: #FFB800;
+  border: 1px solid #FFB800;
+  border-radius: 8px;
+}
+.button--yellow:hover {
+  color: #FFFFFF;
+  background-color: #FFB800;
+}
+.button--blue-line {
+  width: 125px;
+  height: 46px;
+  background-color: transparent;
+  border: 1px solid #1B5FC1;
+  color: #1B5FC1;
+}
+.button--blue-line:hover {
+  color: #FFFFFF;
+  background-color: #1B5FC1;
+}

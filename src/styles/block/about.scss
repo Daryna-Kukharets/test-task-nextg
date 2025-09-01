@@ -1,0 +1,86 @@
+@use "../../styles/utils" as *;
+
+.about {
+  @include container;
+
+  &__bg {
+    position: absolute;
+
+    &--1 {
+      left: 0;
+      top: -5%;
+    }
+
+    &--2 {
+      right: 0;
+      top: 20%;
+    }
+  }
+
+  &__box {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+
+    @include on-tablet {
+      gap: 80px;
+    }
+  }
+
+  &__article {
+    display: grid;
+
+    @include on-tablet {
+      grid-template-columns: 1fr 1fr;
+      gap: 44px;
+      align-items: center;
+    }
+  }
+
+  &__info-block {
+    padding-top: 10px;
+  }
+
+  &__img-box {
+    width: 100%;
+    overflow: hidden;
+    order: 1;
+    border-radius: 16px;
+    border-bottom-left-radius: 0;
+
+    @include on-tablet {
+      order: 0;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    border-bottom-left-radius: 0;
+
+    @include hover(transform scale(1.1));
+  }
+
+  &__text-block {
+    padding-top: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    @include on-tablet {
+      gap: 37px;
+    }
+  }
+
+  &__text {
+    line-height: 30px;
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+}

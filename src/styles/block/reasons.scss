@@ -1,0 +1,95 @@
+@use "../../styles/utils" as *;
+
+.reasons {
+  background-color: $bg-color;
+  position: relative;
+
+  &__box {
+    display: grid;
+    gap: 40px;
+
+    @include container;
+
+    @include on-tablet {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    @include on-desktop {
+      gap: 90px;
+    }
+  }
+
+  &__img-box {
+    width: 100%;
+    border-radius: 16px;
+    border-bottom-left-radius: 0;
+    overflow: hidden;
+    order: 1;
+
+    @include on-tablet {
+      order: 0;
+      height: 630px;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    border-radius: 16px;
+    border-bottom-left-radius: 0;
+    object-fit: cover;
+
+    @include hover(transform scale(1.2));
+    @include on-tablet {
+      height: 630px;
+    }
+  }
+
+  &__text {
+    padding-top: 30px;
+    line-height: 30px;
+  }
+
+  &__icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: $button-blue-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    @include hover(background-color $title-color);
+  }
+
+  &__card {
+    display: flex;
+    gap: 17px;
+
+    @include hover(transform scale(1.1));
+  }
+
+  &__icon {
+    font-size: 24px;
+    color: $white-color;
+  }
+
+  &__reasons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding-top: 35px;
+
+    @include on-desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__subtext {
+    padding-top: 5px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}

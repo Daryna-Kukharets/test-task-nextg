@@ -1,0 +1,83 @@
+@use "../../styles/utils" as *;
+
+.footer {
+  background-color: $footer-bg-color;
+
+  &__block {
+    padding-block: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include container;
+
+    @include on-tablet {
+      padding-block: 73px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__first-block {
+    width: 340px;
+  }
+
+  &__logo {
+    display: block;
+    width: 161px;
+    height: 40px;
+    background-color: $logo-color;
+
+    @include hover(transform scale(1.1));
+  }
+
+  &__text {
+    font-size: 15px;
+    padding-top: 33px;
+  }
+
+  &__title {
+    @extend %font-rubik-medium;
+
+    font-size: 20px;
+    line-height: 30px;
+    color: $title-color;
+  }
+
+  &__nav {
+    padding-top: 12px;
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    &--active {
+      color: $button-blue-color;
+    }
+
+    @include hover(color $button-blue-color);
+  }
+
+  &__icon {
+    color: $button-blue-color;
+    width: 20px;
+
+    @include hover(color $title-color);
+  }
+
+  &__copyright {
+    padding-block: 30px;
+    border: 1px solid $footer-line;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__copy {
+    font-size: 14px;
+    line-height: 30px;
+  }
+}

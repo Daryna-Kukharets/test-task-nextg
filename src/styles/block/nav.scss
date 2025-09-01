@@ -1,0 +1,40 @@
+@use "../../styles/utils" as *;
+
+.nav {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  @include on-desktop {
+    height: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    
+    @include on-desktop {
+      flex-direction: row;
+      gap: 45px;
+    }
+  }
+
+  &__link {
+    line-height: 30px;
+    color: $text-color;
+    transition: color $effect-duration ease;
+
+    &--active {
+      color: $title-color;
+    }
+
+    &:hover {
+      color: $title-color;
+    }
+  }
+}

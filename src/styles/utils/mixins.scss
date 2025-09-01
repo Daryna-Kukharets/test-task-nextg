@@ -1,0 +1,50 @@
+@use "./screen-size" as *;
+@use "./vars" as *;
+
+@mixin hover($properties...) {
+  & {
+    transition: $effect-duration ease;
+  }
+
+  &:hover {
+    @each $property, $value in $properties {
+      #{$property}: $value;
+    }
+  }
+}
+
+@mixin on-tablet {
+  @media (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin on-large-desktop {
+  @media (min-width: $large-desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin container {
+  padding-inline: 16px;
+
+  @include on-tablet {
+    padding-inline: 32px;
+  }
+
+  @include on-desktop {
+    padding-inline: 60px;
+    max-width: 1140px;
+    margin: auto;
+  }
+
+  @include on-large-desktop {
+    padding-inline: 0;
+  }
+}

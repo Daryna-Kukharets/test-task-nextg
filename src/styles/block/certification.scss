@@ -1,0 +1,62 @@
+@use "../../styles/utils" as *;
+
+.certification {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+
+  @include container;
+
+  @include on-tablet {
+    flex-direction: row;
+  }
+
+  @include on-desktop {
+    gap: 50px;
+  }
+
+  @include on-large-desktop {
+    gap: 87px;
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+
+    @include on-tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__line {
+    width: 100px;
+    height: 1px;
+    background-color: $yellow-color;
+
+    @include on-desktop {
+      width: 147px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 50px;
+
+    @include on-desktop {
+      gap: 80px;
+    }
+
+    @include on-large-desktop {
+      gap: 100px;
+    }
+  }
+
+  &__icon {
+    @include hover(transform scale(1.2), filter hue-rotate(160deg));
+  }
+}

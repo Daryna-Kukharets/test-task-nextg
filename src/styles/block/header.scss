@@ -1,0 +1,20 @@
+@use "../../styles/utils" as *;
+
+.header {
+  padding-top: 20px;
+  background-color: $bg-color;
+  position: relative;
+
+  &__box {
+    @include container;
+  }
+
+  &__intro {
+    padding-top: 80px;
+  }
+
+  &__services {
+    padding-top: 72px;
+    padding-bottom: 53px;
+  }
+}
