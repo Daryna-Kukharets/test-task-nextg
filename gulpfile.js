@@ -17,8 +17,14 @@ async function clean() {
 
 function images() {
   return gulp
-    .src(paths.images)
+    .src(paths.images, { encoding: false })
     .pipe(gulp.dest("./dist/images"))
+    .on("end", () => {
+      console.log("Images copied successfully");
+    })
+    .on("error", (err) => {
+      console.error("Error copying images:", err);
+    })
     .pipe(browserSync.stream({ once: true }));
 }
 

@@ -1,18 +1,21 @@
 {
+  "name": "test-task-nextg",
+  "homepage": "./",
+  "version": "1.0.0",
   "scripts": {
     "dev": "gulp serve",
     "build": "gulp build",
-    "start": "gulp serve"
+    "start": "gulp serve",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "browser-sync": "^3.0.4",
     "del": "^8.0.0",
-    "gh-pages": "^6.3.0",
     "gulp": "^5.0.1",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-htmlmin": "^5.0.1",
     "gulp-sass": "^6.0.1",
+    "sass": "^1.91.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.91.0"
+    "gulp-htmlmin": "^5.0.1"
   }
 }
