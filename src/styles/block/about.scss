@@ -44,6 +44,7 @@
   }
 
   &__img-box {
+    margin-top: 20px;
     width: 100%;
     overflow: hidden;
     order: 1;
@@ -51,6 +52,7 @@
     border-bottom-left-radius: 0;
 
     @include on-tablet {
+      margin-top: 0;
       order: 0;
     }
   }

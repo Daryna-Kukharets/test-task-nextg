@@ -45,7 +45,12 @@
 
   &__icons {
     display: flex;
+    flex-direction: column;
     gap: 50px;
+
+    @include on-tablet {
+      flex-direction: row;
+    }
 
     @include on-desktop {
       gap: 80px;
