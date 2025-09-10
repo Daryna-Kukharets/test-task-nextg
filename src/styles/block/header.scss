@@ -2,6 +2,7 @@
 
 .header {
   padding-top: 20px;
+  padding-bottom: 53px;
   background-color: $bg-color;
   position: relative;
 
@@ -10,11 +11,14 @@
   }
 
   &__intro {
-    padding-top: 80px;
+    margin-top: 45px;
+
+    @include on-large-desktop {
+      margin-top: 80px;
+    }
   }
 
   &__services {
-    padding-top: 72px;
-    padding-bottom: 53px;
+    margin-top: 72px;
   }
 }

@@ -7,10 +7,10 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -80px;
     left: 0;
     width: 100%;
-    height: calc(100% - 80px);
+    height: 100%;
     z-index: -1;
     background-color: $bg-color;
     border-bottom-left-radius: 150px;
@@ -51,13 +51,13 @@
   }
 
   &__text {
-    padding-top: 20px;
+    margin-top: 20px;
     color: $black-color;
-    line-height: 30px;
+    line-height: 1.88;
   }
 
   &__user {
-    padding-top: 20px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     gap: 10px;

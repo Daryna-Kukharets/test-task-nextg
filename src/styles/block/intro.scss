@@ -15,41 +15,41 @@
     @extend %font-rubik-medium;
 
     font-size: 14px;
-    line-height: 30px;
+    line-height: 2.1;
     color: $yellow-color;
   }
 
   &__title {
-    padding-top: 20px;
+    margin-top: 20px;
 
     @include on-large-desktop {
-      padding-top: 30px;
+      margin-top: 30px;
     }
   }
 
   &__text {
-    padding-top: 20px;
+    margin-top: 20px;
 
     @include on-tablet {
-      padding-top: 30px;
+      margin-top: 30px;
     }
 
     @include on-large-desktop {
-      padding-top: 40px;
+      margin-top: 40px;
     }
   }
 
   &__buttons {
-    padding-top: 32px;
+    margin-top: 32px;
     display: flex;
     gap: 20px;
 
     @include on-tablet {
-      padding-top: 44px;
+      margin-top: 44px;
     }
 
     @include on-large-desktop {
-      padding-top: 54px;
+      margin-top: 54px;
     }
   }
 
@@ -81,11 +81,11 @@
     border-bottom-left-radius: 150px;
 
     @include on-desktop {
-      height: 650px;
+      height: 669px;
     }
 
     @include on-large-desktop {
-      height: auto;
+      height: 891px;
     }
   }
 
@@ -94,15 +94,15 @@
     border-radius: 16px;
     border-bottom-left-radius: 0;
     overflow: hidden;
-    max-height: 500px;
-    width: 100%;
+    height: 450px;
 
     @include on-desktop {
       margin-left: 48px;
+      height: 558px;
     }
 
     @include on-large-desktop {
-      max-height: 744px;
+      height: 744px;
     }
   }
 
@@ -110,8 +110,10 @@
     display: none;
     width: 100%;
     object-fit: cover;
+    height: 100%;
 
     @include hover(transform scale(1.1));
+
     @include on-tablet {
       display: block;
     }

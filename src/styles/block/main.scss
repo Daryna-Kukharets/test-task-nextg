@@ -4,31 +4,31 @@
   position: relative;
 
   &__about {
-    padding-top: 80px;
-    
+    margin-top: 80px;
+
     @include on-tablet {
-      padding-top: 111px;
+      margin-top: 111px;
     }
   }
 
   &__info {
-    padding-top: 80px;
+    margin-top: 80px;
   }
 
   &__certification {
-    padding-top: 80px;
+    margin-top: 80px;
   }
 
   &__reasons {
-    padding-top: 80px;
+    margin-top: 80px;
   }
 
   &__reviews {
-    padding-top: 80px;
+    margin-top: 80px;
   }
 
   &__step {
-    padding-top: 80px;
+    margin-top: 80px;
   }
 
   &__contacts {

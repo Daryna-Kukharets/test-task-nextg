@@ -61,7 +61,7 @@
         <div class="header__intro intro">
           <div class="intro__text-block">
             <p class="intro__masks">3M N95 masks</p>
-            <h1 class="intro__title">Protective Face Masks</h1>
+            <h1 class="intro__title" tabindex="2">Protective Face Masks</h1>
             <p class="intro__text">
               We offer the fast delivery wholesale selection of N95 masks and
               surgical masks, featuring FDA-approved quality and 2 – 5 days
@@ -77,23 +77,44 @@
           </div>
           <div class="intro__photo">
             <div class="intro__bg-box">
-              <img
-                src="./images/intro-bg.png"
-                alt="background"
-                class="intro__bg"
-              />
+              <picture>
+                <source
+                  srcset="./images/intro-bg-desktop.jpg"
+                  media="(min-width: 1140px)"
+                />
+                <img
+                  src="./images/intro-bg-large.jpg"
+                  alt="background"
+                  width="927"
+                  height="891"
+                  class="intro__bg"
+                />
+              </picture>
             </div>
             <div class="intro__mask-box">
-              <img
-                src="./images/intro-masks.png"
-                alt="masks"
-                class="intro__mask"
-              />
+              <picture>
+                <source
+                  srcset="./images/intro-masks-tablet.jpg"
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcset="./images/intro-masks-desktop.jpg"
+                  media="(max-width: 1140px)"
+                />
+
+                <img
+                  src="./images/intro-masks-large.jpg"
+                  alt="masks"
+                  width="496"
+                  height="744"
+                  class="intro__mask"
+                />
+              </picture>
             </div>
           </div>
         </div>
         <div class="header__services services">
-          <article class="services__card">
+          <div class="services__card">
             <div class="services__top">
               <svg
                 width="40"
@@ -132,8 +153,8 @@
               From picking to custom-crating to domestic and international
               shipping, we handle it all for you.
             </p>
-          </article>
-          <article class="services__card">
+          </div>
+          <div class="services__card">
             <div class="services__top">
               <svg
                 width="40"
@@ -165,8 +186,8 @@
               To ensure quality, our team of HTM professionals fully assess and
               evaluate all equipment.
             </p>
-          </article>
-          <article class="services__card">
+          </div>
+          <div class="services__card">
             <div class="services__top">
               <svg
                 width="40"
@@ -195,8 +216,8 @@
               If you have any questions about the equipment, our product
               specialists are here to help.
             </p>
-          </article>
-          <article class="services__card">
+          </div>
+          <div class="services__card">
             <div class="services__top">
               <svg
                 width="40"
@@ -232,7 +253,7 @@
               Pay your way, whether by credit card, PayPal or the redemption of
               earned credits.
             </p>
-          </article>
+          </div>
         </div>
       </div>
     </header>
@@ -253,11 +274,24 @@
           <div class="about__box">
             <article class="about__article">
               <div class="about__img-box">
-                <img
-                  src="./images/about-1.png"
-                  alt="respirator"
-                  class="about__img"
-                />
+                <picture>
+                  <source
+                    srcset="./images/about-1-tablet.jpg"
+                    media="(max-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/about-1-desktop.jpg"
+                    media="(max-width: 1140px)"
+                  />
+
+                  <img
+                    src="./images/about-1-large.jpg"
+                    width="570"
+                    height="616"
+                    alt="respirator"
+                    class="about__img"
+                  />
+                </picture>
               </div>
               <div class="about__info-block">
                 <h2 class="about__title">N95 Respirators</h2>
@@ -320,11 +354,24 @@
                 </div>
               </div>
               <div class="about__img-box">
-                <img
-                  src="./images/about-2.png"
-                  alt="respirator"
-                  class="about__img"
-                />
+                <picture>
+                  <source
+                    srcset="./images/about-2-tablet.jpg"
+                    media="(max-width: 768px)"
+                  />
+                  <source
+                    srcset="./images/about-2-desktop.jpg"
+                    media="(max-width: 1140px)"
+                  />
+
+                  <img
+                    src="./images/about-2-large.jpg"
+                    width="570"
+                    height="620"
+                    alt="respirator"
+                    class="about__img"
+                  />
+                </picture>
               </div>
             </article>
           </div>
@@ -333,7 +380,23 @@
         <section class="main__info info">
           <div class="info__box">
             <div class="info__photo-w-text">
-              <img src="./images/info.png" alt="info" class="info__img" />
+              <picture>
+                <source
+                  srcset="./images/info-tablet.jpg"
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcset="./images/info-desktop.jpg"
+                  media="(max-width: 1140px)"
+                />
+                <img
+                  src="./images/info-large.jpg"
+                  alt="info"
+                  width="570"
+                  height="616"
+                  class="info__img"
+                />
+              </picture>
               <div class="info__block info__block-on-photo">
                 <p class="info__text info__text--absolute">
                   Given the praised reputation and reliable quality within the
@@ -368,8 +431,7 @@
                 <a href="#" class="info__button button button--blue-line">
                   Learn more
                 </a>
-                <div class="info__line"></div>
-                <a href="tel:+1 123 444 5678" class="info__number-link">
+                <a href="tel:+11234445678" class="info__number-link">
                   <div class="info__phone-box">
                     <i class="fas fa-phone info__icon"></i>
                   </div>
@@ -384,10 +446,7 @@
         </section>
 
         <section class="main__certification certification">
-          <div class="certification__intro">
-            <p class="certification__text">Our Lab Certification</p>
-            <div class="certification__line"></div>
-          </div>
+          <p class="certification__text">Our Lab Certification</p>
           <div class="certification__icons">
             <img
               src="./images/icons/fda.svg"
@@ -410,7 +469,23 @@
         <section class="main__reasons reasons">
           <div class="reasons__box">
             <div class="reasons__img-box">
-              <img src="./images/mask.png" alt="mask" class="reasons__img" />
+              <picture>
+                <source
+                  srcset="./images/mask-tablet.jpg"
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcset="./images/mask-desktop.jpg"
+                  media="(max-width: 1140px)"
+                />
+                <img
+                  src="./images/mask-large.jpg"
+                  alt="mask"
+                  width="400"
+                  height="630"
+                  class="reasons__img"
+                />
+              </picture>
             </div>
             <div class="reasons__info-box">
               <h2 class="reasons__title">Reasons To Choose Our Products</h2>
@@ -424,7 +499,7 @@
                 quality.
               </p>
               <div class="reasons__reasons">
-                <article class="reasons__card">
+                <div class="reasons__card">
                   <div class="reasons__icon-box">
                     <i class="fas fa-trophy reasons__icon"></i>
                   </div>
@@ -435,9 +510,9 @@
                       specialists are here to help, specialists are here.
                     </p>
                   </div>
-                </article>
+                </div>
 
-                <article class="reasons__card">
+                <div class="reasons__card">
                   <div class="reasons__icon-box">
                     <i class="fas fa-chart-bar reasons__icon"></i>
                   </div>
@@ -450,9 +525,9 @@
                       specialists are here to help.
                     </p>
                   </div>
-                </article>
+                </div>
 
-                <article class="reasons__card">
+                <div class="reasons__card">
                   <div class="reasons__icon-box">
                     <i class="fas fa-shield-alt reasons__icon"></i>
                   </div>
@@ -465,9 +540,9 @@
                       specialists are here to help.
                     </p>
                   </div>
-                </article>
+                </div>
 
-                <article class="reasons__card">
+                <div class="reasons__card">
                   <div class="reasons__icon-box">
                     <i class="fas fa-user-friends reasons__icon"></i>
                   </div>
@@ -480,7 +555,7 @@
                       specialists are here to help.
                     </p>
                   </div>
-                </article>
+                </div>
               </div>
             </div>
           </div>
@@ -488,7 +563,7 @@
 
         <section class="main__reviews reviews">
           <div class="reviews__box">
-            <article class="reviews__card">
+            <div class="reviews__card">
               <div class="reviews__top">
                 <div class="reviews__stars">
                   <i class="fas fa-star reviews__star"></i>
@@ -506,15 +581,19 @@
                 pharetra odio pharetra at cras aliquam."
               </p>
               <div class="reviews__user">
-                <img src="./images/user1.jpg" alt="user1" class="reviews__img" />
+                <img
+                  src="./images/user1.jpg"
+                  alt="user1"
+                  class="reviews__img"
+                />
                 <div class="reviews__user-info">
                   <p class="reviews__name">Maria Eve</p>
                   <p class="reviews__position">Lawyer</p>
                 </div>
               </div>
-            </article>
+            </div>
 
-            <article class="reviews__card">
+            <div class="reviews__card">
               <div class="reviews__top">
                 <div class="reviews__stars">
                   <i class="fas fa-star reviews__star"></i>
@@ -532,15 +611,19 @@
                 elementum vestibulum accumsan at etiam vitae."
               </p>
               <div class="reviews__user">
-                <img src="./images/user2.jpg" alt="user2" class="reviews__img" />
+                <img
+                  src="./images/user2.jpg"
+                  alt="user2"
+                  class="reviews__img"
+                />
                 <div class="reviews__user-info">
                   <p class="reviews__name">Liam Bower</p>
                   <p class="reviews__position">Mechanic</p>
                 </div>
               </div>
-            </article>
+            </div>
 
-            <article class="reviews__card">
+            <div class="reviews__card">
               <div class="reviews__top">
                 <div class="reviews__stars">
                   <i class="fas fa-star reviews__star"></i>
@@ -558,13 +641,17 @@
                 suspendisse non posuere penatibus tincidunt aliquam lorem."
               </p>
               <div class="reviews__user">
-                <img src="./images/user3.jpg" alt="user3" class="reviews__img" />
+                <img
+                  src="./images/user3.jpg"
+                  alt="user3"
+                  class="reviews__img"
+                />
                 <div class="reviews__user-info">
                   <p class="reviews__name">Nicky</p>
                   <p class="reviews__position">Dancer</p>
                 </div>
               </div>
-            </article>
+            </div>
           </div>
         </section>
 
@@ -592,17 +679,13 @@
               </div>
             </a>
 
-            <div class="contacts__line"></div>
-
-            <a href="tel:+1 123 456 7890" class="contacts__article">
+            <a href="tel:+11234567890" class="contacts__article">
               <i class="fas fa-phone info__icon contacts__icon"></i>
               <div class="contacts__info">
                 <p class="contacts__title">Call Us</p>
                 <p class="contacts__text">+1 123 456 7890</p>
               </div>
             </a>
-
-            <div class="contacts__line"></div>
 
             <a href="mailto:info@example.com" class="contacts__article">
               <i class="fas fa-envelope contacts__icon"></i>

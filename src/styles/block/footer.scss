@@ -33,24 +33,24 @@
 
   &__text {
     font-size: 15px;
-    padding-top: 33px;
+    margin-top: 33px;
   }
 
   &__title {
     @extend %font-rubik-medium;
 
     font-size: 20px;
-    line-height: 30px;
+    line-height: 1.5;
     color: $title-color;
   }
 
   &__nav {
-    padding-top: 12px;
+    margin-top: 12px;
   }
 
   &__link {
     font-size: 15px;
-    line-height: 30px;
+    line-height: 2;
     display: flex;
     align-items: center;
     gap: 14px;
@@ -78,6 +78,6 @@
 
   &__copy {
     font-size: 14px;
-    line-height: 30px;
+    line-height: 2.1;
   }
 }

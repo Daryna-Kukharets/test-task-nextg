@@ -41,7 +41,7 @@
   @include on-desktop {
     padding-inline: 60px;
     max-width: 1140px;
-    margin: auto;
+    margin-inline: auto;
   }
 
   @include on-large-desktop {

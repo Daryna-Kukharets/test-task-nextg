@@ -10,12 +10,9 @@
 
     @include container;
 
-    @include on-tablet {
+    @include on-desktop {
       grid-template-columns: 1fr 1fr;
       align-items: center;
-    }
-
-    @include on-desktop {
       gap: 90px;
     }
   }
@@ -27,9 +24,8 @@
     overflow: hidden;
     order: 1;
 
-    @include on-tablet {
+    @include on-desktop {
       order: 0;
-      height: 630px;
     }
   }
 
@@ -41,14 +37,11 @@
     object-fit: cover;
 
     @include hover(transform scale(1.2));
-    @include on-tablet {
-      height: 630px;
-    }
   }
 
   &__text {
     padding-top: 30px;
-    line-height: 30px;
+    line-height: 1.88;
   }
 
   &__icon-box {
@@ -80,7 +73,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 26px;
-    padding-top: 35px;
+    margin-top: 35px;
 
     @include on-desktop {
       grid-template-columns: repeat(2, 1fr);
@@ -88,8 +81,8 @@
   }
 
   &__subtext {
-    padding-top: 5px;
+    margin-top: 5px;
     font-size: 15px;
-    line-height: 22px;
+    line-height: 1.5;
   }
 }

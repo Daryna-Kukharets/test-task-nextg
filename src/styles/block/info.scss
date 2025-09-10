@@ -22,7 +22,7 @@
     grid-template-rows: repeat(3, 1fr);
 
     background-color: $bg-color;
-    
+
     @include container;
     @include on-tablet {
       grid-template-columns: 2fr 1fr 1fr;
@@ -94,7 +94,7 @@
 
   &__block-title {
     font-size: 20px;
-    line-height: 50px;
+    line-height: 2.5;
   }
 
   &__text {
@@ -114,29 +114,44 @@
   }
 
   &__contacts {
-    padding-top: 28px;
+    margin-top: 28px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 30px;
 
-    @include on-desktop {
-      gap: 30px;
-      flex-direction: row;
+    @include on-tablet {
+      gap: 40px;
     }
 
-    @include on-large-desktop {
-      gap: 40px;
+    @include on-desktop {
+      flex-direction: row;
+      gap: 80px;
     }
   }
 
-  &__line {
-    width: 46px;
-    height: 1px;
-    background-color: $white-color;
+  &__button {
+    position: relative;
 
-    @include on-desktop {
-      height: 46px;
-      width: 1px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      height: 1px;
+      width: 46px;
+      background-color: $white-color;
+
+      @include on-tablet {
+        bottom: -20px;
+      }
+
+      @include on-desktop {
+        height: 46px;
+        width: 1px;
+        left: auto;
+        right: -40px;
+        top: 0;
+      }
     }
   }
 
@@ -165,15 +180,15 @@
     @extend %font-open-sans-semibold;
 
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1.7;
     color: $button-blue-color;
   }
 
   &__number {
     @extend %font-open-sans-semibold;
 
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 1;
     color: $black-color;
 
     @include hover(color $button-blue-color);

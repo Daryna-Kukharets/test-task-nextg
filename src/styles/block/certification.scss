@@ -7,11 +7,13 @@
   align-items: center;
   position: relative;
   z-index: 5;
+  background-color: $bg-color;
 
   @include container;
 
   @include on-tablet {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   @include on-desktop {
@@ -22,24 +24,30 @@
     gap: 87px;
   }
 
-  &__intro {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
+  &__text {
+    position: relative;
 
-    @include on-tablet {
-      flex-direction: row;
-    }
-  }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translate(-50%);
+      width: 100px;
+      height: 1px;
+      background-color: $yellow-color;
 
-  &__line {
-    width: 100px;
-    height: 1px;
-    background-color: $yellow-color;
+      @include on-tablet {
+        top: 50%;
+        left: auto;
+        transform: none;
+        right: -80%;
+      }
 
-    @include on-desktop {
-      width: 147px;
+      @include on-desktop {
+        width: 147px;
+        right: -110%;
+      }
     }
   }
 
